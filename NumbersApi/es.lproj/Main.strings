@@ -1,0 +1,24 @@
+
+/* Class = "IBUILabel"; text = "Enter a number to see an interesting fact"; ObjectID = "IN4-ki-nCd"; */
+"IN4-ki-nCd.text" = "Introduce un número para ver un hecho interesante";
+
+/* Class = "IBUIButton"; normalTitle = "Try Random!"; ObjectID = "aV0-JF-Sxt"; */
+"aV0-JF-Sxt.normalTitle" = "¡Aleatorio!";
+
+/* Class = "IBUISegmentedControl"; arB-mC-flY.segmentTitles[0] = "Math"; ObjectID = "arB-mC-flY"; */
+"arB-mC-flY.segmentTitles[0]" = "Math";
+
+/* Class = "IBUISegmentedControl"; arB-mC-flY.segmentTitles[1] = "Date"; ObjectID = "arB-mC-flY"; */
+"arB-mC-flY.segmentTitles[1]" = "Día";
+
+/* Class = "IBUISegmentedControl"; arB-mC-flY.segmentTitles[2] = "Year"; ObjectID = "arB-mC-flY"; */
+"arB-mC-flY.segmentTitles[2]" = "Año";
+
+/* Class = "IBUISegmentedControl"; arB-mC-flY.segmentTitles[3] = "Trivia"; ObjectID = "arB-mC-flY"; */
+"arB-mC-flY.segmentTitles[3]" = "Trivial";
+
+/* Class = "IBUILabel"; text = "Interesting fact about a number"; ObjectID = "kbV-H4-KYR"; */
+"kbV-H4-KYR.text" = "Hecho interesante sobre un número";
+
+/* Class = "IBUIButton"; normalTitle = "Search"; ObjectID = "xKa-jY-QGK"; */
+"xKa-jY-QGK.normalTitle" = "Buscar";

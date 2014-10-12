@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  NumbersApi
+
+  Created by Jaime on 12/10/14.
+  Copyright (c) 2014 Jaime Aranaz. All rights reserved.
+*/
+
+"Number not found!" = "Number not found!";
+"Sorry, there is any interesting fact about that number" = "Sorry, there is any interesting fact about that number";
+"Are you sure this is a number?" = "Are you sure this is a number?";
+"Error" = "Error";
+"There was an error, please try again" = "There was an error, please try again";
+"OK" = "OK";

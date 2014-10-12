@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="NAPMainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="arB-mC-flY">
+                                <rect key="frame" x="62" y="74" width="476" height="29"/>
+                                <segments>
+                                    <segment title="Math"/>
+                                    <segment title="Date"/>
+                                    <segment title="Year"/>
+                                    <segment title="Trivia"/>
+                                </segments>
+                            </segmentedControl>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CFv-vD-jeb">
+                                <rect key="frame" x="167" y="173" width="266" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="266" id="suB-An-rrX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="search"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="H0u-Ad-gLn"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interesting fact about a number" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbV-H4-KYR">
+                                <rect key="frame" x="43" y="284" width="514" height="232"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="514" id="Cvs-Qw-2Sf"/>
+                                    <constraint firstAttribute="height" constant="232" id="p4A-sX-NSd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a number to see an interesting fact" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IN4-ki-nCd">
+                                <rect key="frame" x="144" y="144" width="312" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="312" id="xig-wj-REl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xKa-jY-QGK">
+                                <rect key="frame" x="385" y="211" width="48" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="ZD7-hA-QBv"/>
+                                </constraints>
+                                <state key="normal" title="Search">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RAF-C2-mP2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aV0-JF-Sxt">
+                                <rect key="frame" x="167" y="211" width="87" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="87" id="n50-ex-5cm"/>
+                                </constraints>
+                                <state key="normal" title="Try Random!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tryRandomButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PoH-w7-rw1"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="E0Y-Ur-8VX">
+                                <rect key="frame" x="282" y="381" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CFv-vD-jeb" firstAttribute="leading" secondItem="aV0-JF-Sxt" secondAttribute="leading" id="3Z3-HC-1Gz"/>
+                            <constraint firstItem="xKa-jY-QGK" firstAttribute="trailing" secondItem="CFv-vD-jeb" secondAttribute="trailing" id="8Ad-uS-w4G"/>
+                            <constraint firstAttribute="centerX" secondItem="CFv-vD-jeb" secondAttribute="centerX" id="ACN-2x-0vX"/>
+                            <constraint firstItem="xKa-jY-QGK" firstAttribute="top" secondItem="CFv-vD-jeb" secondAttribute="bottom" constant="8" id="C5J-q6-PNM"/>
+                            <constraint firstItem="arB-mC-flY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="46" id="GJc-Qk-lje"/>
+                            <constraint firstItem="kbV-H4-KYR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="Guu-CZ-7L3"/>
+                            <constraint firstItem="arB-mC-flY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="54" id="Hcs-Ok-v7Z"/>
+                            <constraint firstItem="kbV-H4-KYR" firstAttribute="top" secondItem="aV0-JF-Sxt" secondAttribute="bottom" constant="43" id="IHe-Vz-EZD"/>
+                            <constraint firstItem="kbV-H4-KYR" firstAttribute="centerX" secondItem="E0Y-Ur-8VX" secondAttribute="centerX" constant="-0.5" id="MqS-zY-aWJ"/>
+                            <constraint firstItem="CFv-vD-jeb" firstAttribute="top" secondItem="IN4-ki-nCd" secondAttribute="bottom" constant="8" id="PYZ-AX-MHh"/>
+                            <constraint firstItem="kbV-H4-KYR" firstAttribute="centerY" secondItem="E0Y-Ur-8VX" secondAttribute="centerY" constant="0.5" id="SE1-FA-zt1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kbV-H4-KYR" secondAttribute="trailing" constant="27" id="hnD-Ll-mFh"/>
+                            <constraint firstItem="CFv-vD-jeb" firstAttribute="top" secondItem="arB-mC-flY" secondAttribute="bottom" constant="71" id="i02-M8-vmH"/>
+                            <constraint firstAttribute="centerX" secondItem="IN4-ki-nCd" secondAttribute="centerX" id="lRI-qF-6XT"/>
+                            <constraint firstItem="IN4-ki-nCd" firstAttribute="top" secondItem="arB-mC-flY" secondAttribute="bottom" constant="42" id="oJx-QQ-pSL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="arB-mC-flY" secondAttribute="trailing" constant="46" id="pvi-6m-0Cg"/>
+                            <constraint firstItem="aV0-JF-Sxt" firstAttribute="top" secondItem="CFv-vD-jeb" secondAttribute="bottom" constant="8" id="xWh-3c-tND"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityView" destination="E0Y-Ur-8VX" id="ZUE-ab-aL8"/>
+                        <outlet property="factLbl" destination="kbV-H4-KYR" id="tIi-Nq-VyA"/>
+                        <outlet property="numberTxtFld" destination="CFv-vD-jeb" id="qaI-xU-Hez"/>
+                        <outlet property="segmentedControl" destination="arB-mC-flY" id="xCK-PT-OP2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
